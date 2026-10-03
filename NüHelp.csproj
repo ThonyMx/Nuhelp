@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F2CB9D4-4E95-4DA4-8A67-2A79E5CF5A85}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Opulos.NüHelp</RootNamespace>
+    <AssemblyName>NuHelp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>NüHelp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Opulos.NüHelp.NüHelpMain</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Core\DB\Product.cs">
+      <Link>Opulos\DB\Product.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Interop\Interop.cs">
+      <Link>Opulos\Interop\Interop.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Interop\Word\MailMerge.cs">
+      <Link>Opulos\Interop\Word\MailMerge.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Interop\Word\Word.cs">
+      <Link>Opulos\Interop\Word\Word.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Interop\Word\WordDocument.cs">
+      <Link>Opulos\Interop\Word\WordDocument.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Interop\Word\WordDocuments.cs">
+      <Link>Opulos\Interop\Word\WordDocuments.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Interop\Word\WordEnums.cs">
+      <Link>Opulos\Interop\Word\WordEnums.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\IO\SettingsBase.cs">
+      <Link>Opulos\SettingsBase.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\IO\XmlDocumentEx.cs">
+      <Link>Opulos\XmlDocumentEx.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Media\VolumeMixer.cs">
+      <Link>Opulos\Media\VolumeMixer.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Media\WaveGenerator.cs">
+      <Link>Opulos\Media\WaveGenerator.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\BitmapUtil.cs">
+      <Link>Opulos\UI\BitmapUtil.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Canvas2.cs">
+      <Link>Opulos\UI\Canvas2.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ComboBox2.cs">
+      <Link>Opulos\UI\ComboBox2.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ComboCheckBoxBase.cs">
+      <Link>Opulos\UI\ComboCheckBoxBase.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ComboCheckBoxLB.cs">
+      <Link>Opulos\UI\ComboCheckBoxLB.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ComboCheckBoxMI.cs">
+      <Link>Opulos\UI\ComboCheckBoxMI.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ControlHelpEx.cs">
+      <Link>Opulos\ControlHelpEx.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Dialog.cs">
+      <Link>Opulos\UI\Dialog.cs</Link>
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ErrorProvider2.cs">
+      <Link>Opulos\UI\ErrorProvider2.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\FontEx.cs">
+      <Link>Opulos\UI\FontEx.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\FontExWPF.cs">
+      <Link>Opulos\UI\FontExWPF.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Form2.cs">
+      <Link>Opulos\UI\Form2.cs</Link>
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\FormEx.cs">
+      <Link>Opulos\UI\FormEx.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\GdiCharSet.cs">
+      <Link>Opulos\UI\GdiCharSet.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\GroupBox2.cs">
+      <Link>Opulos\UI\GroupBox2.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\IControl2.cs">
+      <Link>Opulos\UI\IControl2.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\IHasProduct.cs">
+      <Link>Opulos\UI\IHasProduct.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\InputBox.cs">
+      <Link>Opulos\UI\InputBox.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Insets.cs">
+      <Link>Opulos\UI\Insets.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Label2.cs">
+      <Link>Opulos\UI\Label2.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Layout\RCCover.cs">
+      <Link>Opulos\UI\Layout\RCCover.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Layout\RCLayout.cs">
+      <Link>Opulos\UI\Layout\RCLayout.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Layout\RCParam.cs">
+      <Link>Opulos\UI\Layout\RCParam.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Layout\RCParamCollection.cs">
+      <Link>Opulos\UI\Layout\RCParamCollection.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Layout\WrapLayout.cs">
+      <Link>Opulos\UI\Layout\WrapLayout.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\MenuRenderer.cs">
+      <Link>Opulos\UI\MenuRenderer.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\MessageBox2.cs">
+      <Link>Opulos\UI\MessageBox2.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\Pane.cs">
+      <Link>Opulos\UI\Pane.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\RichTextBox2.cs">
+      <Link>Opulos\UI\RichTextBox2.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\RichTextBoxControl.cs">
+      <Link>Opulos\UI\RichTextBoxControl.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ScreenUtils.cs">
+      <Link>Opulos\UI\ScreenUtils.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ScreenUtilsWPF.cs">
+      <Link>Opulos\UI\ScreenUtilsWPF.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ScrollPane.cs">
+      <Link>Opulos\UI\ScrollPane.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\SplitButton.cs">
+      <Link>Opulos\UI\SplitButton.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\TabControl2.cs">
+      <Link>Opulos\UI\TabControl2.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\TextBox2.cs">
+      <Link>Opulos\UI\TextBox2.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ToolStripDropDownItemEx.cs">
+      <Link>Opulos\UI\ToolStripDropDownItemEx.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ToolStripEx.cs">
+      <Link>Opulos\UI\ToolStripEx.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ToolStripMenuItem2.cs">
+      <Link>Opulos\UI\ToolStripMenuItem2.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ToolStripRadioButtonMenuItem.cs">
+      <Link>Opulos\UI\ToolStripRadioButtonMenuItem.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ToolStripSpringTextBox.cs">
+      <Link>Opulos\UI\ToolStripSpringTextBox.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ToolTip2.cs">
+      <Link>Opulos\UI\ToolTip2.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\ToolTips.cs">
+      <Link>Opulos\UI\ToolTips.cs</Link>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\UI\WPF\IPreferredSize.cs">
+      <Link>Opulos\UI\Layout\IPreferredSize.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Utils\AssemblyUtils.cs">
+      <Link>Opulos\Utils\AssemblyUtils.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Utils\ColorUtil.cs">
+      <Link>Opulos\Utils\ColorUtil.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Utils\ExceptionEx.cs">
+      <Link>Opulos\Utils\ExceptionEx.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Utils\HelpWindowUtil.cs">
+      <Link>Opulos\HelpWindowUtil.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Utils\MultiKey.cs">
+      <Link>Opulos\Utils\MultiKey.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Utils\NiceColors.cs">
+      <Link>Opulos\Utils\NiceColors.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Utils\StringEx.cs">
+      <Link>Opulos\StringEx.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Utils\ThreadController.cs">
+      <Link>Opulos\Utils\ThreadController.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Win32\Dwmapi.cs">
+      <Link>Opulos\Win32\Dwmapi.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Win32\Enums\ShowWindow.cs">
+      <Link>Opulos\Win32\ShowWindow.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Win32\Enums\TreeViewStyles.cs">
+      <Link>Opulos\Win32\TreeViewStyles.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Win32\Enums\WindowStyles.cs">
+      <Link>Opulos\Win32\WindowStyles.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="..\Core\Win32\Structs\RECT.cs">
+      <Link>Opulos\Win32\RECT.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CHM\CHMAliasMap.cs" />
+    <Compile Include="CHM\CHMButton.cs" />
+    <Compile Include="CHM\CHMCompile.cs" />
+    <Compile Include="CHM\CHMFont.cs" />
+    <Compile Include="CHM\CHMNodeTopicMatcher.cs" />
+    <Compile Include="CHM\CHMOptions.cs" />
+    <Compile Include="CHM\CHMTab.cs" />
+    <Compile Include="CHM\CHMTabPosition.cs" />
+    <Compile Include="CHM\CHMWindow.cs" />
+    <Compile Include="CHM\CHMWinProp.cs" />
+    <Compile Include="CHM\DOM\CHMCategory.cs" />
+    <Compile Include="CHM\DOM\CHMDocument.cs" />
+    <Compile Include="CHM\DOM\CHMIndexEntry.cs" />
+    <Compile Include="CHM\DOM\CHMNode.cs" />
+    <Compile Include="FileUtil.cs" />
+    <Compile Include="HelpConstants.cs" />
+    <Compile Include="ProjectList.cs" />
+    <Compile Include="SharedSettings.cs" />
+    <Compile Include="UI\AdvancedOptionsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\CHMOptionsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\CHMWindowDetailPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ExtraFilesPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\HtmlPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\EncodingsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\FontsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ListPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\NüHelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NüHelpMain.cs" />
+    <Compile Include="UI\OptionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="..\Core\UI\ErrorProvider2.resx">
+      <Link>Opulos\UI\ErrorProvider2.resx</Link>
+      <DependentUpon>ErrorProvider2.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="UI\OptionsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\WindowsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NüHelp.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NüHelp.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="QuickGuide.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="QuickGuide.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\openfile.png" />
+    <None Include="Icons\openfolder.png" />
+    <None Include="Icons\remove2.png" />
+    <None Include="Icons\Open.png" />
+    <None Include="Icons\Save.png" />
+    <None Include="Icons\SaveAs.png" />
+    <None Include="Icons\HelpIcons.png" />
+    <Content Include="Icons\Browse.png" />
+    <Content Include="Icons\collapse_all.png" />
+    <Content Include="Icons\expand_all.png" />
+    <Content Include="Icons\Insert.png" />
+    <Content Include="Icons\Insert2.png" />
+    <Content Include="Icons\Pencil.png" />
+    <Content Include="Icons\Pencil2.png" />
+    <Content Include="Icons\Reload.png" />
+    <Content Include="Icons\Save2.png" />
+    <Content Include="Icons\TreeFolder.png" />
+    <Content Include="Icons\TreeItem.png" />
+    <Content Include="Icons\TreeRoot.png" />
+    <Content Include="Readme_Release_Notes.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Icons\Add.png" />
+    <None Include="Icons\Compile3.png" />
+    <None Include="Icons\Folder.png" />
+    <None Include="Icons\Help.png" />
+    <None Include="Icons\New.png" />
+    <None Include="Icons\Options.png" />
+    <None Include="Icons\Remove.png" />
+    <Content Include="htmlhelp.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="htmlhelp.exe.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NüHelp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
